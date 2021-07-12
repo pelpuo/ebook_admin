@@ -1,6 +1,3 @@
-Thanks for downloading this theme!
-
-Theme Name: NyansaAdmin 
-Theme URL: 
-Author: BootstrapMade
-Author URL: 
+Name: NyansaAdmin Dashboard
+Author: Godfrey
+Dashboard for Nyansa Mobile App Project 
