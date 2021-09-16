@@ -29,34 +29,39 @@
 
   <div class="container">
 
-    <form class="login-form" action="index.html">
+    <form class="login-form" id="login" method="POST" >
       <div class="login-wrap">
         <p class="login-img"><i class="icon_lock_alt"></i></p>
         <div class="input-group">
           <span class="input-group-addon"><i class="icon_profile"></i></span>
-          <input type="text" class="form-control" placeholder="Username" autofocus>
+          <input type="text" class="form-control" id="email" name="email" placeholder="Email" autofocus>
         </div>
         <div class="input-group">
           <span class="input-group-addon"><i class="icon_key_alt"></i></span>
-          <input type="password" class="form-control" placeholder="Password">
+          <input type="password" id="password" name="password" class="form-control" placeholder="Password">
         </div>
-        <label class="checkbox">
+        <!-- <label class="checkbox">
                 <input type="checkbox" value="remember-me"> Remember me
                 <span class="pull-right"> <a href="#"> Forgot Password?</a></span>
-            </label>
-        <button class="btn btn-primary btn-lg btn-block" type="submit">Login</button>
-        <button class="btn btn-info btn-lg btn-block" type="submit">Signup</button>
+            </label> -->
+        <button class="btn btn-primary btn-lg btn-block" id="loginBtn" type="submit">Login</button>
+        <!-- <button class="btn btn-info btn-lg btn-block" type="submit">Signup</button> -->
       </div>
     </form>
     <div class="text-right">
       <div class="credits">
         
-          Designed by <a href="https://bootstrapmade.com/">Nyansa </a>
+          <!-- Designed by <a href="https://bootstrapmade.com/">Nyansa </a> -->
         </div>
     </div>
   </div>
 
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+<script src="./js/login.js"></script>
+
 
 </body>
+
 
 </html>

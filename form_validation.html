@@ -395,40 +395,53 @@
               </header>
               <div class="panel-body">
                 <div class="form">
-                  <form class="form-validate form-horizontal" id="feedback_form" method="get" action="">
+
+                  <form class="form-validate form-horizontal" enctype="multipart/form-data" id="feedback_form" method="post" action="http://localhost:3000/book">
                     <div class="form-group ">
                       <label for="cname" class="control-label col-lg-2">Book Title<span class="required">*</span></label>
                       <div class="col-lg-10">
-                        <input class="form-control" id="cname" name="fullname" minlength="5" type="text" required />
+                        <input class="form-control" id="name" name="name" minlength="5" type="text" required />
                       </div>
                     </div>
                     <div class="form-group ">
-                      <label for="cemail" class="control-label col-lg-2">Book ID<span class="required">*</span></label>
+                      <label for="cemail" class="control-label col-lg-2">Author<span class="required">*</span></label>
                       <div class="col-lg-10">
-                        <input class="form-control " id="cemail" type="email" name="email" required />
+                        <input class="form-control " id="author" type="text" name="author" required />
                       </div>
                     </div>
                     <div class="form-group ">
-                      <label for="curl" class="control-label col-lg-2">Upload Document</label>
+                      <label for="curl" class="control-label col-lg-2">Upload Book</label>
                       <div class="col-lg-10">
-                        <input class="form-control " id="curl" type="file" name="url" />
+                        <input class="form-control " id="book" type="file" name="fileUrl" />
                       </div>
                     </div>
                     <div class="form-group ">
-                      <label for="cname" class="control-label col-lg-2">Cover <span class="required">*</span></label>
+                      <label for="curl" class="control-label col-lg-2">Upload Cover</label>
                       <div class="col-lg-10">
-                        <input class="form-control" id="subject" name="subject" minlength="5" type="text" required />
+                        <input class="form-control " id="cover" type="file" name="coverImage" />
                       </div>
                     </div>
                     <div class="form-group ">
-                      <label for="ccomment" class="control-label col-lg-2">Discription</label>
+                      <label for="cname" class="control-label col-lg-2">Genre <span class="required">*</span></label>
                       <div class="col-lg-10">
-                        <textarea class="form-control " id="ccomment" name="comment" required></textarea>
+                        <input class="form-control" id="genre" name="genre" minlength="5" type="text" required />
+                      </div>
+                    </div>
+                    <div class="form-group ">
+                      <label for="cname" class="control-label col-lg-2">Age limit <span class="required">*</span></label>
+                      <div class="col-lg-10">
+                        <input class="form-control" id="age-limit" name="ageRating" type="number" required />
+                      </div>
+                    </div>
+                    <div class="form-group ">
+                      <label for="ccomment" class="control-label col-lg-2">Description</label>
+                      <div class="col-lg-10">
+                        <textarea class="form-control " id="description" name="description" required></textarea>
                       </div>
                     </div>
                     <div class="form-group">
                       <div class="col-lg-offset-2 col-lg-10">
-                        <button class="btn btn-primary" type="submit">Post</button>
+                        <button class="btn btn-primary" type="submit" id="post-button">Post</button>
                         <button class="btn btn-default" type="button">Cancel</button>
                       </div>
                     </div>
@@ -526,9 +539,25 @@
   <script type="text/javascript" src="js/jquery.validate.min.js"></script>
 
   <!-- custom form validation script for this page-->
-  <script src="js/form-validation-script.js"></script>
+  <!-- <script src="js/form-validation-script.js"></script> -->
   <!--custome script for all page-->
   <script src="js/scripts.js"></script>
+
+
+      <!-- Firebase -->
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <!-- <script src="/__/firebase/8.7.1/firebase-app.js"></script> -->
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+        https://firebase.google.com/docs/web/setup#available-libraries -->
+    <!-- <script src="/__/firebase/8.7.1/firebase-analytics.js"></script> -->
+
+    <!-- Initialize Firebase -->
+    <!-- <script src="/__/firebase/init.js"></script> -->
+
+    <!-- <script src="js/_firebase-config.js"></script> -->
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="js/_upload-book.js"></script>
 
 
 </body>
