@@ -6,7 +6,7 @@
 // const book = document.querySelector("#book")
 // const cover = document.querySelector("#cover")
 
-const url = "http://localhost:3000/book"
+const url = "https://nyansa-api.herokuapp.com/book"
 
 // document.querySelector("#post-button").addEventListener("click", (e)=>{
 //     e.preventDefault()

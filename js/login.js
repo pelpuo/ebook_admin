@@ -14,7 +14,7 @@ document.querySelector("#loginBtn").addEventListener("click", e =>{
 
 //   console.log(data)
 
-  fetch("http://localhost:3000/login", {
+  fetch("https://nyansa-api.herokuapp.com/login", {
     method: 'POST',
     headers:{
       'Content-Type': 'application/json',
@@ -24,6 +24,7 @@ document.querySelector("#loginBtn").addEventListener("click", e =>{
   .then(response => response.json())
   .then(data => {
     if(data.message == "success"){
+      localStorage.setItem("nyansaAuthToken", data.token)
       location.href = './index.html'
       alert("Login successful")
     }
